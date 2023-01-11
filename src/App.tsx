@@ -25,7 +25,8 @@ function App() {
                 <>
                     <ProductImage />
                     <ProductTitle />
-                    <ProductButtons />
+                    <ProductButtons />                   
+                    <button style={{ width:'70px', height:'30px' }} onClick={ reset }>Reset</button>
                 </>
             )
         }
