@@ -2,6 +2,7 @@
 import './App.css';
 import { ProductCard, ProductImage, ProductTitle, ProductButtons } from 'lfmm-product-card';
 
+
 const product = {
   id:'1',
   title:'Coffee Mug - Card',
@@ -16,7 +17,7 @@ function App() {
         product={ product }
         initialValues={{
             count: 6,
-            maxCount: 10,
+            maxCount: 15,
         }}
     >
         {
