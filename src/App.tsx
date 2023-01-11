@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import { ProductCard, ProductImage, ProductTitle, ProductButtons } from 'lfmm-product-card';
+
+const product = {
+  id:'1',
+  title:'Coffee Mug - Card',
+  img:'./coffee-mug.png'
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hola..!</h1>
+      <ProductCard 
+        product={ product }
+        initialValues={{
+            count: 6,
+            maxCount: 10,
+        }}
+    >
+        {
+            ({ reset, count, isMaxCountReached, maxCount, increaseBy  }) => (
+                <>
+                    <ProductImage />
+                    <ProductTitle />
+                    <ProductButtons />
+                </>
+            )
+        }
+    </ProductCard>
     </div>
   );
 }
